@@ -8,12 +8,283 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/titulo"
+        android:layout_width="449dp"
+        android:layout_height="42dp"
+        android:background="#5C31A8"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="Ha Vagas"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nome completo"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+    <EditText
+        android:id="@+id/campo_nome"
+        android:layout_width="379dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="E-mail"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/campo_nome" />
+
+    <EditText
+        android:id="@+id/campo_email"
+        android:layout_width="395dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <CheckBox
+        android:id="@+id/cb_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deseja receber atualizações de oportunidades?"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/campo_email" />
+
+    <TextView
+        android:id="@+id/tel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_email" />
+
+    <EditText
+        android:id="@+id/campo_tel"
+        android:layout_width="412dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Ex: 12-93456-7890"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tel" />
+
+    <RadioGroup
+        android:id="@+id/rg_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/campo_tel">
+
+        <RadioButton
+            android:id="@+id/comercial"
+            android:layout_width="9dp"
+            android:layout_height="31dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Tel. comercial" />
+
+        <RadioButton
+            android:id="@+id/residencial"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tel. residencial" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cb_cel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adicionar número de celular?"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_tel" />
+
+    <TextView
+        android:id="@+id/cel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Celular"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_cel" />
+
+    <EditText
+        android:id="@+id/campo_cel"
+        android:layout_width="412dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Ex: 12-93456-7890"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cel" />
+
+    <TextView
+        android:id="@+id/sexo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sexo"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/campo_cel" />
+
+    <RadioGroup
+        android:id="@+id/rg_sexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sexo">
+
+        <RadioButton
+            android:id="@+id/masculino"
+            android:layout_width="9dp"
+            android:layout_height="31dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/feminino"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Feminino" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/nascimento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Data de nascimento"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_sexo" />
+
+    <EditText
+        android:id="@+id/campo_nascimento"
+        android:layout_width="412dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Ex: dd/mm/aaaa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nascimento" />
+
+    <TextView
+        android:id="@+id/formação"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Formação"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/campo_nascimento" />
+    <Spinner
+        android:id="@+id/inicialSp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="@array/formação"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/formação" />
+
+    <TextView
+        android:id="@+id/vagas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Vagas de interesse"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inicialSp" />
+
+    <EditText
+        android:id="@+id/campo_vagas"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vagas" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/campo_vagas"
+        app:layout_constraintVertical_bias="0.206"
+        tools:layout_editor_absoluteX="6dp">
+
+        <Button
+            android:id="@+id/limparBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/limpar"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/salvarBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/salvar"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
