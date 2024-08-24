@@ -3,19 +3,13 @@
     <string name="nome">Nome completo</string>
     <string name="email">E-mail</string>
     <string name="tel">Telefone</string>
-
     <string name="cel">Telefone celular</string>
-
     <string name="sexo">Sexo</string>
     <string name="nascimento">Data de nascimento</string>
-
     <string name="formação">Formação</string>
-
     <string name="vagas">Vagas de interesse</string>
-
     <string name="limpar">Limpar</string>
     <string name="salvar">Salvar</string>
-
     <string-array name="formação">
         <item>Fundamental</item>
         <item>Médio</item>
@@ -24,5 +18,4 @@
         <item>Mestrado</item>
         <item>Doutorado</item>
     </string-array>
-
 </resources>
